@@ -20,3 +20,10 @@ Route::get('/customers/create', "CustomersController@create");
 Route::get('/customers/{customers}/edit','CustomersController@edit');
 Route::patch('customers/{customers}/edit','CustomersController@update');
 Route::delete('customers/{customers}/edit','CustomersController@destroy');
+
+Route::get('/reservations', "CustomersController@index");
+Route::post('/customers', "CustomersController@store");
+Route::get('/customers/create', "CustomersController@create");
+Route::get('/customers/{customers}/edit','CustomersController@edit');
+Route::patch('customers/{customers}/edit','CustomersController@update');
+Route::delete('customers/{customers}/edit','CustomersController@destroy');
