@@ -19,38 +19,34 @@ class ReservationsTableSeeder extends Seeder
          'amount' => 0,
          'customer_id' => 1
         ]);
-     // DB::table('reservations')->insert([
-     //     'id' => 9,
-     //     // 'last_name' => "Noogie"
-     //     // 'first_name' => "Douglas"
-     //     'room_type' => "Deluxe"
-     //     'date' => "August3"
-     //     'is_clean' => true
-     // ]);
-     // DB::table('reservations')->insert([
-     //     'id' => 10,
-     //     // 'last_name' => "Cat"
-     //     // 'first_name' => "Felix"
-     //     'room_type' => "Deluxe"
-     //     'date' => "August5"
-     //     'is_clean' => false
-     // ]);
-     // DB::table('reservations')->insert([
-     //     'id' => 11,
-     //     // 'last_name' => "Thornberry"
-     //     // 'first_name' => "Nigel"
-     //     'room_type' => "Economy"
-     //     'date' => "August6"
-     //     'is_clean' => true
-     // ]);
-     // DB::table('reservations')->insert([
-     //     'id' => 12,
-     //     // 'last_name' => "Rampant"
-     //     // 'first_name' => "Dino"
-     //     'room_type' => "Deluxe"
-     //     'date' => "August10"
-     //     'is_clean' => true
-     // ]);
+        DB::table('reservations')->insert([
+         'room_no'=> 101,
+         'start_date'=> Carbon::createFromDate(2019, 4, 16),
+         'end_date'=> Carbon::createFromDate(2019, 4, 20),
+         'amount' => 0,
+         'customer_id' => 2
+        ]);
+        DB::table('reservations')->insert([
+         'room_no'=> 102,
+         'start_date'=> Carbon::createFromDate(2019, 4, 21),
+         'end_date'=> Carbon::createFromDate(2019, 4, 25),
+         'amount' => 0,
+         'customer_id' => 3
+        ]);
+        DB::table('reservations')->insert([
+         'room_no'=> 103,
+         'start_date'=> Carbon::createFromDate(2019, 4, 26),
+         'end_date'=> Carbon::createFromDate(2019, 4, 30),
+         'amount' => 0,
+         'customer_id' => 4
+        ]);
+        DB::table('reservations')->insert([
+         'room_no'=> 104,
+         'start_date'=> Carbon::createFromDate(2019, 4, 31),
+         'end_date'=> Carbon::createFromDate(2019, 4, 36),
+         'amount' => 0,
+         'customer_id' => 5
+        ]);
    }
 
 }

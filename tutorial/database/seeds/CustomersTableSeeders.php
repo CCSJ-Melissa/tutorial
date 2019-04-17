@@ -11,17 +11,25 @@ class CustomersTableSeeders extends Seeder
      */
     public function run()
     {
-         DB::table('customers')->insert([
+    DB::table('customers')->insert([
             'first_name' => "Melissa",
-			'last_name' => "Paradiso",
+			      'last_name' => "Paradiso",
         ]);
 		DB::table('customers')->insert([
             'first_name' => "Jasper",
-			'last_name' => "Paradiso",
+			      'last_name' => "Paradiso",
         ]);
 		DB::table('customers')->insert([
             'first_name' => "Austin",
-			'last_name' => "Paul",
+			      'last_name' => "Paul",
         ]);
+    DB::table('customers')->insert([
+            'first_name' => "Ross",
+            'last_name' => "Baldwin",
+        ]);
+    DB::table('customers')->insert([
+            'first_name' => "Norman",
+        	  'last_name' => "Reedus",
+        ]);        
     }
 }
