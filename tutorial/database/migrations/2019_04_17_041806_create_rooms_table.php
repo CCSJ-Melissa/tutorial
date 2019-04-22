@@ -14,13 +14,13 @@ class CreateRoomsTable extends Migration
     public function up()
     {
         Schema::create('rooms', function (Blueprint $table) {
-            $table->bigIncrements('id');
             $table->integer('room_no')->unsigned();
-            $table->foreign('room_no')->references('room_no')->on('reservations');
+            $table->primary('room_no');
             $table->string('category');
             $table->boolean('unavailable');
-            $table->timestamps();
         });
+
+
     }
 
     /**

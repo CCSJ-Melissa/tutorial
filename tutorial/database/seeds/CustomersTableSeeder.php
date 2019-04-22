@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CustomersTableSeeders extends Seeder
+class CustomersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -30,6 +30,6 @@ class CustomersTableSeeders extends Seeder
     DB::table('customers')->insert([
             'first_name' => "Norman",
         	  'last_name' => "Reedus",
-        ]);        
+        ]);
     }
 }

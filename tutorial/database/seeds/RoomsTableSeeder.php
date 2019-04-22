@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class create_rooms_seeder extends Seeder
+class RoomsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
