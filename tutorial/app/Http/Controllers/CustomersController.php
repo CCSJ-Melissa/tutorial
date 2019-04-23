@@ -14,9 +14,6 @@ class CustomersController extends Controller
     $customers = Customer::all();
 
     return view ('customers.index', ['customers' => $customers]);
-
-    // dd($customers);
-
   }
 
   public function create()

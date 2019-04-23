@@ -19,7 +19,7 @@ class CreateReservationsTable extends Migration
         $table->foreign('room_no')->references('room_no')->on('rooms');
         $table->date('start_date');
         $table->date('end_date');
-        $table->decimal('amount');
+        $table->decimal('amount')->default('');
         $table->bigInteger('customer_id')->unsigned();
         $table->foreign('customer_id')->references('id')->on('customers');
         $table->timestamps();
