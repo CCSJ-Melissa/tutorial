@@ -15,11 +15,8 @@ class ReservationsController extends Controller
 
   public function create()
   {
-
-    //dd('hello');
     return view ('reservations.create');
-     // $reservation->start_date = new \DateTime($request->input('date'));
-     // $reservation->end_date = new \DateTime($request->input('date'));
+
   }
 
   public function store()
@@ -31,9 +28,11 @@ class ReservationsController extends Controller
     $reservation->room_no = request('room_no');
     $reservation->start_date = request('start_date');
     $reservation->end_date = request('end_date');
+    $reservation->amount = request('amount');
+    $reservation->customer_id = request('customer_id');
     // dd($customer);
     $reservation->save();
 
-    return redirect('/reservations');
+    return redirect('/customers');
   }
 }

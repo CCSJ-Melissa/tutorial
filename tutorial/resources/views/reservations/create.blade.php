@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Create New Reservation</h1>
-  <form method="POST" action="/reservations">
+  <form method="POST" action="/reservations/{{ $reservation->customer_id }}">
     @csrf
 
     <div>
@@ -30,12 +30,16 @@
             <option value=110>110</option>
           </select>
         </h4>
+        <h4 class="info-text">Select Room Type<br>
+         <select name="category" id="category">
+           <option value="Deluxe">Deluxe</option>
+           <option value="Economy">Economy</option>
+        </h4>
             <p>
         <b>Enter Start and End Date:</b>
            </p>
            <table>
                <tr>
-                   <td>&nbsp;(in YYYY, MM, DD format)&nbsp;&nbsp;</td>
                    <td>
                      <input class="input" type="date" name="start_date" size="11" />
                      <input class="input" type="date" name="end_date" size="11" />

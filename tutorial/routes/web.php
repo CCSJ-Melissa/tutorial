@@ -21,11 +21,10 @@ Route::get('/customers/{customers}/edit','CustomersController@edit');
 Route::patch('customers/{customers}/edit','CustomersController@update');
 Route::delete('customers/{customers}/edit','CustomersController@destroy');
 
-Route::get('/reservations', "ReservationsController@index");
-Route::post('/reservations', "ReservationsController@store");
-Route::get('/reservations/create', "ReservationsController@create");
-Route::get('/reservations/{reservations}/edit','ReservationsController@edit');
-Route::patch('reservations/{reservations}/edit','ReservationsController@update');
-Route::delete('customers/{customers}/edit','CustomersController@destroy');
+// Route::get('/reservations', "ReservationsController@index");
+// Route::post('/reservations', "ReservationsController@store");
+// Route::get('/reservations/{customers}/create', "ReservationsController@create");
+// Route::get('/reservations/{reservations}/edit','ReservationsController@edit');
+// Route::patch('reservations/{reservations}/edit','ReservationsController@update');
 
 Route::resource('reservations', 'ReservationsController');
