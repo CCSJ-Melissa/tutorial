@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Reservation;
+use App\Customer;
 
 class ReservationsController extends Controller
 {
@@ -15,7 +16,37 @@ class ReservationsController extends Controller
 
   public function create()
   {
+    dd("god help me");
     return view ('reservations.create');
+
+  }
+
+  public function create_reservation($id)
+  {
+    // dd("god help me");
+    // dd($id);
+    // dd(customer_id);
+    // dd($request);
+    // $customer->first_name = request('first_name');
+    // $customer->last_name = request('last_name');
+    // $last_name = "Jones";
+    // $first_name = "Mark";
+
+    // $customers = Customer::all();
+    // dd($customers);
+    $customer = Customer::find($id);
+    // dd($customer);
+    // // $data = [
+    //   'last_name' => $last_name,
+    //   'first_name' => $first_name,
+    // ];
+
+    return view ('reservations.create', compact('customer'));
+
+    // return view ('reservations.create', [
+    //   'last_name' => $last_name,
+    //   'first_name' => $first_name,
+    // ]);
 
   }
 

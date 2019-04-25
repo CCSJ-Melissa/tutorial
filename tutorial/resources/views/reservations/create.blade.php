@@ -8,12 +8,12 @@
 </head>
 <body>
   <h1>Create New Reservation</h1>
-  <form method="POST" action="/reservations/{{ $reservation->customer_id }}">
+  <form method="POST" action="/reservations/">
     @csrf
 
     <div>
       <p>
-           <b>Enter Reservation</b>
+           <b>Enter Reservation for {{$customer->first_name}} {{$customer->last_name}}</b>
        </p>
        <h4 class="info-text">Select Room<br>
         <select name="room_no" id="room_no">

@@ -28,3 +28,13 @@ Route::delete('customers/{customers}/edit','CustomersController@destroy');
 // Route::patch('reservations/{reservations}/edit','ReservationsController@update');
 
 Route::resource('reservations', 'ReservationsController');
+Route::get('/reservations/create/{customer_id}', "ReservationsController@create_reservation");
+// Route::get('/reservations/create/{customer_id}', function($customer_id)
+// {
+//   // dd("try this");
+//   dd($customer_id);
+//   // dd(request);
+//   // dd({customer_id});
+//   // return view ('reservations.create');
+//
+// });

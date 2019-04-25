@@ -11,7 +11,7 @@
   <ul>
     @foreach ($customers as $customer)
       <li>{{$customer->first_name}} {{$customer->last_name}}</li>
-      <a href="/reservations/create/{{ $customer->id }}"><button class="btn btn-success">Make Reservation</button></a>
+      <a href="/reservations/create/{{ $customer->id }}">Make Reservation</a>
       @endforeach
   </ul>
 </body>
