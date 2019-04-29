@@ -10,7 +10,7 @@
   <h1>All Reservations</h1>
   <ul>
     @foreach ($reservations as $reservation)
-      <li>{{$reservation->room_no}} {{$reservation->start_date}}< {{$reservation->end_date}}</li>
+      <li>{{$reservation->customer_id}} {{$reservation->room_no}} {{$reservation->start_date}}< {{$reservation->end_date}}</li>
       @endforeach
   </ul>
 </body>

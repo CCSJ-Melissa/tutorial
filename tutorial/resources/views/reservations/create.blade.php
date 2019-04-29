@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Create New Reservation</h1>
-  <form method="POST" action="/reservations/">
+  <form method="POST" action="/reservations/{{ $customer->id }}">
     @csrf
 
     <div>
@@ -34,6 +34,7 @@
          <select name="category" id="category">
            <option value="Deluxe">Deluxe</option>
            <option value="Economy">Economy</option>
+           <option value="Suite">Suite</option>
         </h4>
             <p>
         <b>Enter Start and End Date:</b>

@@ -22,6 +22,7 @@ class CreateReservationsTable extends Migration
         $table->decimal('amount')->default(0.0);
         $table->bigInteger('customer_id')->unsigned();
         $table->foreign('customer_id')->references('id')->on('customers');
+        $table->string('category');
         $table->timestamps();
     });
 

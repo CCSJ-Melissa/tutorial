@@ -8,10 +8,16 @@
 </head>
 <body>
   <h1>All Customers</h1>
+  <p>
+    <a href="/customers/create">Enter Customer</a>
+  </p>
   <ul>
     @foreach ($customers as $customer)
       <li>{{$customer->first_name}} {{$customer->last_name}}</li>
+      <p>
+      <a href="/customers/{{$customer->id}}/edit">Edit Customer</a>
       <a href="/reservations/create/{{ $customer->id }}">Make Reservation</a>
+    </p>
       @endforeach
   </ul>
 </body>

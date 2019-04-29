@@ -50,10 +50,17 @@ class ReservationsController extends Controller
 
   }
 
-  public function store()
+  public function store(Request $request,$customer_id)
   {
     // dd('inside store');
-
+     //  $data =[
+     //    $request->customer_id,
+     //    $request->room_no,
+     //    $request->start_date,
+     //    $request->end_date,
+     //    $request->category,
+     //  ];
+     // dd($data);
     $reservation = new Reservation();
 
     $reservation->room_no = request('room_no');
@@ -61,8 +68,9 @@ class ReservationsController extends Controller
     $reservation->end_date = request('end_date');
     $reservation->amount = request('amount');
     $reservation->customer_id = request('customer_id');
-    // dd($customer);
-    $reservation->save();
+    $reservation->category= request('category');
+    // // dd($customer);
+     $reservation->save();
 
     return redirect('/customers');
   }
