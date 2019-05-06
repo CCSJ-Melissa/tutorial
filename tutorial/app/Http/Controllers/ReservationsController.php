@@ -14,12 +14,12 @@ class ReservationsController extends Controller
     return view ('reservations.index', ['reservations' => $reservations]);
   }
 
-  public function create()
-  {
-    dd("god help me");
-    return view ('reservations.create');
-
-  }
+  // public function create()
+  // {
+  //   dd("god help me");
+  //   return view ('reservations.create');
+  //
+  // }
 
   public function create_reservation($id)
   {
@@ -50,7 +50,7 @@ class ReservationsController extends Controller
 
   }
 
-  public function store(Request $request,$customer_id)
+  public function store($customer_id)
   {
     // dd('inside store');
      //  $data =[
