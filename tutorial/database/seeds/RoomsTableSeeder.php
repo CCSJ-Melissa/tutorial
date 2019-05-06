@@ -18,22 +18,22 @@ class RoomsTableSeeder extends Seeder
     ]);
       DB::table('rooms')->insert([
       'room_no'=> 101,
-      'category'=> "Economy",
+      'category'=>"Economy",
       'unavailable'=> false
     ]);
       DB::table('rooms')->insert([
       'room_no'=> 102,
-      'category'=> "Economy",
+      'category'=>"Suite",
       'unavailable'=> true
     ]);
       DB::table('rooms')->insert([
       'room_no'=> 103,
-      'category'=> "Deluxe",
+      'cateogry'=>"Economy",
       'unavailable'=> true
     ]);
       DB::table('rooms')->insert([
       'room_no'=> 104,
-      'category'=> "Economy",
+      'category'=>"Deluxe",
       'unavailable'=> false
     ]);
     }
