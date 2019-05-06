@@ -8,10 +8,13 @@
 </head>
 <body>
   <h1>All Reservations</h1>
-  <ul>
+  <table border="1">
+    <tr>
+      <th>ID</th><th>Room Number</th><th>Start Date</th><th>End Date</th><th>Amount</th></tr>
     @foreach ($reservations as $reservation)
-      <li>{{$reservation->customer_id}} {{$reservation->room_no}} {{$reservation->start_date}}< {{$reservation->end_date}}</li>
+      <tr><td>{{$reservation->customer_id}}</td><td>{{$reservation->room_no}}</td><td>{{$reservation->start_date}}</td><td>{{$reservation->end_date}}</td><td>{{$reservation->amount}}</td></tr>
       @endforeach
-  </ul>
+    </tr>
+  <table>
 </body>
 </html>

@@ -61,6 +61,7 @@ class ReservationsController extends Controller
      //    $request->category,
      //  ];
      // dd($data);
+     dd("inside store");
     $reservation = new Reservation();
 
     $reservation->room_no = request('room_no');

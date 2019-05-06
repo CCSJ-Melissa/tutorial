@@ -29,11 +29,13 @@ Route::resource('customers', "CustomersController");
 // Route::get('/reservations/{reservations}/edit','ReservationsController@edit');
 // Route::patch('reservations/{reservations}/edit','ReservationsController@update');
 
-Route::resource('reservations', 'ReservationsController');
+// Route::resource('reservations', 'ReservationsController');
+Route::get('/reservations', "ReservationsController@index");
+
 Route::get('/reservations/create/{customer_id}', "ReservationsController@create_reservation");
 Route::post('/reservations/{{ $customer->id }}', "ReservationsController@store");
-Route::get('/reservations', 'ReservationsController@create_reservation');
-Route::post('/reservations', 'ReservationsController@store');
+// Route::get('/reservations', 'ReservationsController@create_reservation');
+// Route::post('/reservations', 'ReservationsController@store');
 // Route::get('/reservations/create/{customer_id}', function($customer_id)
 // {
 //   // dd("try this");
