@@ -28,7 +28,7 @@ class RoomsTableSeeder extends Seeder
     ]);
       DB::table('rooms')->insert([
       'room_no'=> 103,
-      'cateogry'=>"Economy",
+      'category'=>"Economy",
       'unavailable'=> true
     ]);
       DB::table('rooms')->insert([

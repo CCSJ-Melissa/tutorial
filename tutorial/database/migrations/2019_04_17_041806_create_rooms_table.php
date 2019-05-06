@@ -17,7 +17,7 @@ class CreateRoomsTable extends Migration
             $table->integer('room_no')->unsigned();
             $table->primary('room_no');
             $table->string('category');
-            $table->foreign('category')-references('category')->on('room_des');
+            $table->foreign('category')->references('category')->on('room_des');
             $table->boolean('unavailable');
         });
 
