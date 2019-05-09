@@ -21,6 +21,6 @@ class Reservation extends Model
   // protected $fillable = [
   //     'customer_id',
   // ];
-
+public $timestamps = false;
 
 }
